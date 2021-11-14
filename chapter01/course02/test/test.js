@@ -14,6 +14,17 @@ describe('Chapter 1 -> Course 2', _ => {
     })
   });
 
+  describe('Is Greater Than', _ => {
+    [...Array(5).keys()].map(_ => {
+      const input = [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)];
+      const output = input[0] > input[1];
+      it(`${input[0]} should be greater than ${input[1]}`, done => {
+        assert.equal(course02.isGreaterThan(input[0], input[1]), output)
+        done()
+      })
+    })
+  })
+
   describe('Reverse numbers', _ => {
     [...Array(5).keys()].map(_ => {
       const input = Math.floor(Math.random() * 1000);
