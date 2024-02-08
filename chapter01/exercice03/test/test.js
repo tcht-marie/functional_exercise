@@ -7,7 +7,7 @@ describe('Chapter 1 -> Course 3', _ => {
     [...Array(5).keys()].map(_ => {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
       const inputs = [...Array(Math.floor(Math.random() * 12)).keys()].reduce((acc, _) => [...acc, characters.charAt(Math.floor(Math.random() * characters.length))], []);
-      const output = inputs.reduce((acc, value) => `${value}${acc}`, '');
+      const output = inputs.split('').reduce((acc, value) => `${value}${acc}`, '');
       it(`should return the reverse string of ${inputs}, it must be equal to ${output}`, done => {
         assert.equal(reverseString(inputs), output)
         done()
