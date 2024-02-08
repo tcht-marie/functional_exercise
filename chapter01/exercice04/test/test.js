@@ -34,10 +34,9 @@ describe('Chapter 1 -> Course 4', _ => {
     [...Array(5).keys()].map(_ => {
       const inputs = [...Array(2)].map(_ => Math.floor(Math.random() * 100))
       const output = inputs.reduce((acc, value)=>acc+value, 0)
-      it(`should return the sum of two numbers ${inputs}, it must be equal to ${output}`, async done => {
+      it(`should return the sum of two numbers ${inputs}, it must be equal to ${output}`, async () => {
         const value = await asyncAdd(inputs[0], inputs[1])
         assert.equal(value, output)
-        done()
       })
     })
   })
