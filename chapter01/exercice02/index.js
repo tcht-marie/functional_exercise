@@ -7,4 +7,5 @@ export function isGreaterThan(input, comp) {
 }
 
 export function reverseNumber(num) {
+    return parseInt(num.toString().split("").reverse().join(""));
 }
