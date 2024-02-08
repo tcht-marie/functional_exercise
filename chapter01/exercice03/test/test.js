@@ -6,7 +6,7 @@ describe('Chapter 1 -> Course 3', _ => {
   describe('Reverse a string', _ => {
     [...Array(5).keys()].map(_ => {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      const inputs = [...Array(Math.floor(Math.random() * 12)).keys()].reduce((acc, _) => [...acc, characters.charAt(Math.floor(Math.random() * characters.length))], []);
+      const inputs = [...Array(Math.floor(Math.random() * 12)).keys()].reduce((acc, _) => `${acc}${characters.charAt(Math.floor(Math.random() * characters.length))}`, '');
       const output = inputs.split('').reduce((acc, value) => `${value}${acc}`, '');
       it(`should return the reverse string of ${inputs}, it must be equal to ${output}`, done => {
         assert.equal(reverseString(inputs), output)
@@ -22,7 +22,7 @@ describe('Chapter 1 -> Course 3', _ => {
       const method = (Math.floor(Math.random() * 100)) % 2 == 0 ? palindromes : notPalindromes
       const input = method[Math.floor(Math.random() * method.length)]
       const output = palindromes.includes(input);
-      it(`${input} should ${output ? '' : 'not '} be recognized as a palindromes`, done => {
+      it(`${input} should ${output ? '' : 'not '}be recognized as a palindromes`, done => {
         if(output)
           assert.isTrue(isPalindrome(input));
         else
