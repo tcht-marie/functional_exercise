@@ -33,11 +33,10 @@ describe('Chapter 1 -> Course 3', _ => {
   })
 
   describe('Count vowels', _ => {
-    const vowels = { aerodynamique: 6, education: 5, informatique: 5, oiseau: 5, universite: 5, cryptographie: 3, bicyclette: 3, ornithorynque: 4, algorithmique: 5, encyclopédie: 5 };
+    const vowels = [ "aerodynamique", "education", "informatique", "oiseau", "universite", "cryptographie", "bicyclette", "ornithorynque", "algorithmique", "encyclopedie" ];
     [...Array(5).keys()].map(_ => {
-      const keys = Object.keys(vowels)
-      const input = keys[Math.floor(Math.random() * keys.length)];
-      const output = vowels[input];
+      const input = vowels[Math.floor(Math.random() * vowels.length)];
+      const output = input.match(/[eaiouy]/gi).length
       it(`should return the number of vowels of ${input}, it must be equal to ${output}`, done => {
         assert.equal(countVowels(input), output)
         done()
