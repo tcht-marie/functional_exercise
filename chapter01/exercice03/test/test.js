@@ -21,7 +21,7 @@ describe('Chapter 1 -> Course 3', _ => {
     [...Array(5).keys()].map(_ => {
       const method = (Math.floor(Math.random() * 100)) % 2 == 0 ? palindromes : notPalindromes
       const input = method[Math.floor(Math.random() * method.length)]
-      const output = palindromes.includes(input);
+      const output = input.replace(' ', '').split('').reverse().join('') == input.replace(' ', '');
       it(`${input} should ${output ? '' : 'not '}be recognized as a palindromes`, done => {
         if(output)
           assert.isTrue(isPalindrome(input));
