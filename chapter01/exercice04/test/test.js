@@ -17,11 +17,12 @@ describe('Chapter 1 -> Course 4', _ => {
   });
 
   describe('Filter an Array with callback', _ => {
+    const filter = (a) => a % 2 == 0;
     [...Array(5).keys()].map(_ => {
       const inputs = [...Array(Math.floor(Math.random() * 10))].map(_ => Math.floor(Math.random() * 100))
-      const output = inputs.reduce((acc, value) => acc == null || value > acc ? value : acc, null)
+      const output = inputs.filter(filter)
       it(`should return the a filtered array of ${inputs}, it should be ${output}`, done => {
-        filterArrayWithCallback(inputs, (value) => {
+        filterArrayWithCallback(inputs, filter, (value) => {
           assert.equal(value, output)
           done()
         })
@@ -42,11 +43,12 @@ describe('Chapter 1 -> Course 4', _ => {
   })
 
   describe('Filter an Array with Promise', _ => {
+    const filter = (a) => a % 2 == 0;
     [...Array(5).keys()].map(_ => {
       const inputs = Array(Math.floor(Math.random() * 10)).map(_ => Math.floor(Math.random() * 100))
-      const output = inputs.reduce((acc, value) => acc == null || value > acc ? value : acc, null)
+      const output = inputs.filter(filter)
       it(`should return the a filtered array of ${inputs}, it should be ${output}`, async done => {
-        const value = await filterArrayAsync(inputs)
+        const value = await filterArrayAsync(inputs, filter)
         assert.equal(value, output)
         done()
       })
