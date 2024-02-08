@@ -51,10 +51,9 @@ If it work, congratulations! You've got something like this on the console that 
 If not, you must have something to change in your code.
 
 **Optional**:
-Ok, so now you can make the previous function better, 
+Ok, so now you can make the previous function better,
 You just have to capitilize the name. To be sure that people name display correctly even if they mistyped something.
 
 Ok so, You've finished the first course. Congratulation!
 
 Previous course | | [Next course](../course02/)
-
