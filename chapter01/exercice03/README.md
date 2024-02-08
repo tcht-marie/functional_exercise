@@ -21,4 +21,4 @@ If you encounter any failures, double-check your logic and syntax.
 
 ---
 
-[Previous course](../course02/) | | [Next course](../course04/)
+[Previous course](../exercice02/) | | [Next course](../exercice04/)

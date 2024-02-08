@@ -56,4 +56,4 @@ You just have to capitilize the name. To be sure that people name display correc
 
 Ok so, You've finished the first course. Congratulation!
 
-Previous course | | [Next course](../course02/)
+Previous course | | [Next course](../exercice02/)

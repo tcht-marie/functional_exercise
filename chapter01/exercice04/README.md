@@ -2,4 +2,4 @@
 
 
 
-[Previous course](../course03/) | | Next course
+[Previous course](../exercice03/) | | Next course
