@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { reverseString , isPalindrome, countVowels } from '../';
+import { reverseString , isPalindrome, countVowels } from '../index.js';
 
 describe('Chapter 1 -> Course 3', _ => {
   describe('Reverse a string', _ => {

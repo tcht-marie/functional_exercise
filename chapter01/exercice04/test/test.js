@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { addWithCallback , filterArrayWithCallback, asyncAdd, filterArrayAsync } from '..';
+import { addWithCallback , filterArrayWithCallback, asyncAdd, filterArrayAsync } from '../index.js';
 
 describe('Chapter 1 -> Course 4', _ => {
   describe('Arrow Functions and Callbacks', _ => {
@@ -46,7 +46,7 @@ describe('Chapter 1 -> Course 4', _ => {
       const inputs = Array(Math.floor(Math.random() * 10)).map(_ => Math.floor(Math.random() * 100))
       const output = inputs.reduce((acc, value) => acc == null || value > acc ? value : acc, null)
       it(`should return the a filtered array of ${inputs}, it should be ${output}`, async done => {
-        const value = await filterArrayWithCallback(inputs)
+        const value = await filterArrayAsync(inputs)
         assert.equal(value, output)
         done()
       })

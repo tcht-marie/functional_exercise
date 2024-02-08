@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { greetWorld, greet, capitilizedGreet } from '../';
+import { greetWorld, greet, capitilizedGreet } from '../index.js';
 
 const names = ['alice', 'BoB', 'Tiff', 'Bruce', 'John'];
 

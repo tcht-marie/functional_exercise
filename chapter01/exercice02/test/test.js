@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { sum, isGreaterThan, reverseNumber } from '../';
+import { sum, isGreaterThan, reverseNumber } from '../index.js';
 
 describe('Chapter 1 -> Course 2', _ => {
   describe('Sum two number', _ => {
