@@ -7,6 +7,7 @@ export function addWithCallback(a, b, callback) {
 
 export function filterArrayWithCallback(array, filterFunc, callback) {
   setTimeout(() => {
+    callback(filterFunc(array));
   }, 1000);
 }
 
