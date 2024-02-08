@@ -16,8 +16,8 @@ describe('Chapter 1 -> Course 3', _ => {
   });
 
   describe('Is a palindrome', _ => {
-    const palindromes = ["radar", "niveau", "kayak", "reifier", "rotor", "solos", "ressasser", "esope", "elu par cette crapule", "la mariee ira mal", "a l ecart cet ane va evitant cet ecart la"];
-    const notPalindromes = ["chaise", "ordinateur", "bibliotheque", "elephant", "girafe", "montagne", "riviere", "soleil", "voiture", "librairie", "univers", "42"];
+    const palindromes = ["radar", "kayak", "reifier", "rotor", "solos", "ressasser", "elu par cette crapule", "la mariee ira mal", "a l ecart cet ane va evitant cet ecart la"];
+    const notPalindromes = ["chaise", "niveau", "ordinateur", "bibliotheque", "elephant", "esope", "girafe", "montagne", "riviere", "soleil", "voiture", "librairie", "univers", "42"];
     [...Array(5).keys()].map(_ => {
       const method = (Math.floor(Math.random() * 100)) % 2 == 0 ? palindromes : notPalindromes
       const input = method[Math.floor(Math.random() * method.length)]
