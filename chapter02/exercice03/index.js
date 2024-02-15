@@ -1,34 +1,28 @@
 /**
- * Print a table sorted ASC using any technique you want
+ * Print the number of occurrences of a wanted element in the table.
  * @param {number[]} table
+ * @param {number} wanted
  */
-export function basicSortTable(table) {
+export function countOccurrencesInTable(table, wanted) {
+  let count = 0;
+  for (let i = 0; i < table.length; i++) {
+    if (table[i] === wanted) {
+      count++;
+    }
+  }
+  console.log(count);
 }
 
 /**
- * Print a table sorted ASC using Bubble sort
+ * Print only unique elements of the table.
  * @param {number[]} table
  */
-export function bubbleSortTable(table) {
+export function printUniqueElements(table) {
 }
 
 /**
- * Print a table sorted ASC using insertion sort
+ * Check if the table is sorted in ascending order.
  * @param {number[]} table
  */
-export function insertionSortTable(table) {
-}
-
-/**
- * Print a table sorted ASC using merge sort
- * @param {number[]} table
- */
-export function mergeSortTable(table) {
-}
-
-/**
- * Print a table sorted ASC using quick sort
- * @param {number[]} table
- */
-export function quickSortTable(table) {
+export function isTableSorted(table) {
 }

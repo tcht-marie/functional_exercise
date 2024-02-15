@@ -3,6 +3,7 @@
  * @param {number[]} table
  */
 export function printTable(table) {
+
 }
 
 /**
@@ -10,4 +11,12 @@ export function printTable(table) {
  * @param {number[]} table
  */
 export function printTableInverted(table) {
+
+}
+
+/**
+ * Print in the console the sum of each elements.
+ * @param {number[]} table
+ */
+export function sumOfTable(table) {
 }
