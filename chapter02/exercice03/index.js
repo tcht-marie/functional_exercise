@@ -19,13 +19,15 @@ export function countOccurrencesInTable(table, wanted) {
  * @param {number[]} table
  */
 export function printUniqueElements(table) {
-  // new Set crée un ensemble qui stocke mes valeurs uniques de table
-  // const unique = new Set(table);
   // avec les ..., crée nouveau tableau avec les valeurs récupérées de Set
   const unique = [...new Set(table)];
-  // je crée un nouveau tableau en récupérant que mes valeurs uniques récupérées par Set
-  // const uniquePrint = Array.from(unique);
-  console.log(uniquePrint);
+  console.log(unique);
+
+  /* new Set crée un ensemble qui stocke mes valeurs uniques de table
+  const unique = new Set(table);
+  je crée un nouveau tableau en récupérant mes valeurs uniques récupérées par Set
+  const uniquePrint = Array.from(unique);
+  */
 }
 
 
@@ -49,3 +51,14 @@ export function isTableSorted(table) {
   }, true);
   console.log(result);
 }
+
+/* Autre méthode
+  let bool = true;
+  for (let index = 0; index < table.length; index++) {
+  if (table[index] > table[index + 1]) {
+    bool = false;
+    break;
+  }
+  console.log(bool);
+}
+  */
