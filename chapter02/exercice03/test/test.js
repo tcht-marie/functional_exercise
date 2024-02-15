@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import sinon from 'sinon';
 
-import { basicSortTable, bubbleSortTable, sortBySelectionTable ,quickSortTable } from '../index.js';
+import { basicSortTable, bubbleSortTable, insertionSortTable ,mergeSortTable,quickSortTable } from '../index.js';
 
 describe('Array sort', _ => {
   let consoleLogSpy = sinon.spy(console, 'log');
@@ -22,8 +22,13 @@ describe('Array sort', _ => {
     assert.deepEqual(consoleLogSpy.getCall(0).args[0], sorted);
   })
 
-  it(`sortBySelectionTable sort should print a sorted table of ${inputs}`, function() {
-    sortBySelectionTable([...inputs])
+  it(`insertionSortTable sort should print a sorted table of ${inputs}`, function() {
+    insertionSortTable([...inputs])
+    assert.deepEqual(consoleLogSpy.getCall(0).args[0], sorted);
+  })
+
+  it(`mergeSortTable sort should print a sorted table of ${inputs}`, function() {
+    mergeSortTable([...inputs])
     assert.deepEqual(consoleLogSpy.getCall(0).args[0], sorted);
   })
 

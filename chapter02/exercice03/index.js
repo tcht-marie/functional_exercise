@@ -13,10 +13,17 @@ export function bubbleSortTable(table) {
 }
 
 /**
- * Print a table sorted ASC using sort by selection
+ * Print a table sorted ASC using insertion sort
  * @param {number[]} table
  */
-export function sortBySelectionTable(table) {
+export function insertionSortTable(table) {
+}
+
+/**
+ * Print a table sorted ASC using merge sort
+ * @param {number[]} table
+ */
+export function mergeSortTable(table) {
 }
 
 /**
