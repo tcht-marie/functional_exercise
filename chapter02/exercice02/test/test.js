@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import sinon from 'sinon';
 
-import { cumulativeSumOfTable, evenNumberOfTable, greaterThanLimitInTable, indexOfWantedInTable, sumOfTable } from '../index.js';
+import { cumulativeSumOfTable, evenNumberOfTable, greaterThanLimitInTable, indexOfWantedInTable, printMaxValue, printMinValue, sumOfTable } from '../index.js';
 
 describe('Filter, Map, Reduce', _ => {
   let consoleLogSpy = sinon.spy(console, 'log');
@@ -56,4 +56,18 @@ describe('Filter, Map, Reduce', _ => {
       return result
     }, 0)
   })
+
+  it(`printMinValue should print the greater element in ${inputs}`, function() {
+    printMinValue(inputs)
+    const result = inputs.reduce((acc, value) => value < acc ? value : acc, inputs[0])
+    assert.strictEqual(consoleLogSpy.getCall(0).args[0], result);
+  })
+
+  it(`printMaxValue should print the greater element in ${inputs}`, function() {
+    printMaxValue(inputs)
+    const result = inputs.reduce((acc, value) => value > acc ? value : acc, inputs[0])
+    assert.strictEqual(consoleLogSpy.getCall(0).args[0], result);
+  })
+
+
 })

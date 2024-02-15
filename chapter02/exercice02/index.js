@@ -18,6 +18,7 @@ export function evenNumberOfTable(table) {
  * @param {number} wanted
  */
 export function indexOfWantedInTable(table, wanted) {
+
 }
 
 /**
@@ -26,6 +27,7 @@ export function indexOfWantedInTable(table, wanted) {
  * @param {number} limit
  */
 export function greaterThanLimitInTable(table, limit) {
+
 }
 
 /**
@@ -33,4 +35,21 @@ export function greaterThanLimitInTable(table, limit) {
  * @param {number[]} table
  */
 export function cumulativeSumOfTable(table) {
+
+}
+
+/**
+ * Print the minimum value in the table.
+ * @param {number[]} table
+ */
+export function printMinValue(table) {
+
+}
+
+/**
+ * Print the maximum value in the table.
+ * @param {number[]} table
+ */
+export function printMaxValue(table) {
+
 }
