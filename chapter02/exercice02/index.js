@@ -3,6 +3,8 @@
  * @param {number[]} table
  */
 export function sumOfTable(table) {
+    let sum = table.reduce((acc, value) => acc + value, 0);
+    console.log(sum);
 }
 
 /**
@@ -10,6 +12,10 @@ export function sumOfTable(table) {
  * @param {number[]} table
  */
 export function evenNumberOfTable(table) {
+    let evenNumbers = table.filter(function (number) {
+        return number % 2 === 0
+      })
+      console.log(evenNumbers);
 }
 
 /**
@@ -18,7 +24,12 @@ export function evenNumberOfTable(table) {
  * @param {number} wanted
  */
 export function indexOfWantedInTable(table, wanted) {
-
+    let index = table.indexOf(wanted);
+    if (index !== -1) {
+        console.log(index);
+    } else {
+        console.error("it's not in the table");
+    }
 }
 
 /**
@@ -27,7 +38,13 @@ export function indexOfWantedInTable(table, wanted) {
  * @param {number} limit
  */
 export function greaterThanLimitInTable(table, limit) {
-
+    const resultTable = table.reduce((acc, item) => {
+        if (item > limit) {
+            acc.push(item);
+        }
+        return acc;
+    }, [])
+    console.log(resultTable);
 }
 
 /**
@@ -35,7 +52,12 @@ export function greaterThanLimitInTable(table, limit) {
  * @param {number[]} table
  */
 export function cumulativeSumOfTable(table) {
-
+    let cumulSum = 0;
+    for (let index = 0; index < table.length; index++) {
+        const element = table[index];
+        cumulSum = cumulSum + parseFloat(element);
+        console.log(cumulSum);
+    }
 }
 
 /**
@@ -43,7 +65,8 @@ export function cumulativeSumOfTable(table) {
  * @param {number[]} table
  */
 export function printMinValue(table) {
-
+    const min = table.reduce((acc, num) => Math.min(acc, num))
+    console.log(min);
 }
 
 /**
@@ -51,5 +74,6 @@ export function printMinValue(table) {
  * @param {number[]} table
  */
 export function printMaxValue(table) {
-
+    const max = table.reduce((acc, num) => Math.max(acc, num))
+    console.log(max);
 }

@@ -64,7 +64,7 @@ export function insertionSortTable(table) {
  */
 function merge(left, right) {
     let table2 = [];
-    while ((left.length) && (right.length)) {
+    while (left.length && right.length) {
         if (left[0] < right[0]) {
             table2.push(left.shift())  
         } else {
